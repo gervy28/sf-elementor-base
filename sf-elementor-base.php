@@ -28,4 +28,5 @@ function sf_elem_register_widgets ( $widgets_manager ) {
 	$widgets_manager->register( new \Elementor_Base_Widget_Two() );
 
 }
-add_action( 'elementor/widgets/register', 'register_sf_elem_base' );
+// attach to the elementor widgets register hook with the register widget funciton in this plugin
+add_action( 'elementor/widgets/register', 'sf_elem_register_widgets' );
