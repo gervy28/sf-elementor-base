@@ -7,8 +7,9 @@
  * Author URI:  https://www.siteflight.co
  */
 
-if ( ! defined('ABBSPATH') ) {
-  exit; // security, exit if called directly
+// exit if called directly
+if ( ! defined('ABSPATH') ) {
+  exit; 
 }
 
 // important plugin global variables
@@ -27,4 +28,4 @@ function sf_elem_register_widgets ( $widgets_manager ) {
 	$widgets_manager->register( new \Elementor_Base_Widget_Two() );
 
 }
-add_action( 'elementor/widgets/register', 'register_hello_world_widget' );
+add_action( 'elementor/widgets/register', 'register_sf_elem_base' );
