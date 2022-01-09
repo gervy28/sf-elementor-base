@@ -8,14 +8,16 @@
  */
 
 if ( ! defined('ABBSPATH') ) {
-  exit;
+  exit; // security, exit if called directly
 }
 
+// important plugin global variables
 define( 'SF_ELEMENTOR_BASE_VERSION', '1.0.0' );
-define( 'SF_ELEMENTOR_BASE', 'sf-site-flight' );
+define( 'SF_ELEMENTOR_BASE', 'sf-elem-base' );
 define( 'SF_ELEMENTOR_BASE_PATH', plugin_dir_path( __FILE__ ) );
 
 
+// register elementor widgets
 function sf_elem_register_widgets ( $widgets_manager ) {
 
 	require_once( __DIR__ . '/widgets/base-widget-one.php' );
